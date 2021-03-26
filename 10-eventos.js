@@ -19,3 +19,36 @@
  * onblur => ocurre cuando un elemento pierde el enfoque
  * onfocus => ocurre cuando un elemento
  */
+
+// Algunos eventos pueden ser agregados al HTML
+// <p onclick="Alguna funcion">AAAA</p>
+
+
+// Mandar alerta cuando el usuario hace clic
+
+
+function abrir () {
+    alert("Holaaaa!")
+}
+
+var x = document.getElementById("prueba");
+x.onclick = function () {
+    document.body.innerHTML = Date();
+}
+
+function fcolor (){
+    document.body.style.backgroundColor = "red"
+}
+
+// //o usar:
+// window.onload = function () {
+//     document.body.innerText = "GAAA"
+// }
+
+
+// onchange *******************
+//Convirtiendo a mayúscula
+function cambio () {
+    var y = document.getElementById("nombre");
+    y.value = y.value.toUpperCase();
+}
