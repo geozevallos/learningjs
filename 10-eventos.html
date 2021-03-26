@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      #capture{
+        height: 50px;
+        width: 200px;
+        background-color: #ccc;
+      }
+    </style>
   </head>
   <body onload="fcolor()">
     <button onclick="abrir()">Tócame</button>
     <button id="prueba">Insertar Texto</button>
 
+    <button id="elistener">Sin onclick</button>
+
     <input type="text" id="nombre" onchange="cambio()" />
     
+    <button id="remover">remover</button>
+
+    <div id="capture">
+      <p id="bubble">Algo acá para hacer clic</p>
+    </div>
+
+
     <script src="./10-eventos.js"></script>
   </body>
 </html>
