@@ -9,7 +9,7 @@ let btnnext = document.getElementById("next");
 let slider = document.getElementById("slider");
 let num = 0;
 
-console.log(btnback);
+
 
 btnback.addEventListener("click", atras);
 btnnext.addEventListener("click", adelante);
