@@ -91,3 +91,61 @@ console.log(dos);
 let {nombre, apellido, pasatiempos} = jorge;
 
 console.log(pasatiempos);
+
+
+//------------------OBJETOS LITERALES ----------------------------
+
+let nombreCan = "Duquesa";
+let edadCan = 2;
+
+const DatoPerro = {
+    nombreCan: nombreCan,
+    edadCan: edadCan,
+    ladrar: function(){
+        console.log("Guau, guau");
+    }
+}
+
+console.log(DatoPerro);
+
+// Lo de arriba es igual a:
+const DatoPerro2 = {
+    nombreCan,
+    edadCan,
+    raza: "chuswailer",
+    ladrar(){
+        console.log("Ladrandooo");
+    }
+}
+console.log(DatoPerro2);
+
+// ---------Parametros REST & Operador Spread ------------------
+
+//Parametro Rest: Es para cuando no sabes cuantos inputs tendrás
+
+function sumatoria(a,b, ...c){
+    let resultado = a + b;
+    c.forEach((n) => {
+        resultado += n
+    });
+
+    return resultado;
+}
+
+//así 
+console.log(sumatoria(3,2));
+console.log(sumatoria(3,2,4));
+console.log(sumatoria(3,2,4,4,35,35,21));
+
+//Operador propagacion: Cuando tengamos q expandier una expresion
+
+const primerArreglo = [1,2,3,4],
+segundoArreglo = [5,6,7,8]
+
+//Esto devolvería dos arreglos separados
+const tercerArreglo = [primerArreglo, segundoArreglo]
+console.log(tercerArreglo);
+
+//Pero queremos tener un arreglo con los datos de ambos arreglos:
+const cuartoArreglo = [...primerArreglo, ...segundoArreglo]
+console.log(cuartoArreglo);
