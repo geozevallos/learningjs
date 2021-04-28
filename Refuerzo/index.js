@@ -149,3 +149,44 @@ console.log(tercerArreglo);
 //Pero queremos tener un arreglo con los datos de ambos arreglos:
 const cuartoArreglo = [...primerArreglo, ...segundoArreglo]
 console.log(cuartoArreglo);
+
+
+
+//-------------------------FUNCION FLECHA ------------------------------------------
+//No funciona el this
+
+//Recordar esto es una funcion expresada:
+
+//La funcion expresada se ejecuta siempre despues
+const nombvariable = function(){
+    console.log("hola");
+}
+
+nombvariable();
+
+
+//----------------------------------
+//La arrow function
+const decirHola = () => {
+    console.log("hola");
+}
+
+//Si es de una sola linea (SOLO UNA) puede ser:
+const decirHola2 = () => console.log("Decir hola");
+
+//Si recibe parametro puede ser sin parentesis (OJO SIEMPRE Y CUANDO SEA 1 PARAMETRO)
+
+const decirHola3 = nombre => console.log(`Hola ${nombre}`);
+
+decirHola3("Jorge");
+
+//ES un return implicitp
+
+/** En lugar de hacer esto: 
+ * const sumar = function (a,b){
+    return a + b
+}
+*/
+
+const sumaFflecha = (a,b) => a+b
+console.log(sumaFflecha(4,2));
